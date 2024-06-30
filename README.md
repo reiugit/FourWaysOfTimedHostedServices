@@ -13,7 +13,7 @@ This kind of Hosted Service enables Unit Testing without delays.
 * Now you can change the time within your unit tests for example with fakeTimeProvider.Advance(timespan).
 
 ### 2. 'HostedService' - timed with Timer
-A Timer is not perfect for unit tests.
+A traditional Timer is not perfect for unit tests.
 
 ### 3. 'Worker' - timed with Task.Delay
 Task.Delay is not perfect for unit tests.
