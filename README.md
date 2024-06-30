@@ -5,6 +5,7 @@
 3. 'Worker' - timed with Task.Delay
 4. 'Worker' - timed with PeriodicTimer
 &nbsp;
+
 ### 1. 'HostedService' - timed with TimeProvider.Timer
 This kind of Hosted Service enables Unit Testing without delays.
 * Create your Timers with timeProvider.CreateTimer(...) instead of new Timer(...).
