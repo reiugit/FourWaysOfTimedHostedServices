@@ -3,8 +3,8 @@
 1. 'HostedService' - timed with TimeProvider.Timer . . . best choice for Unit Tests
 2. 'HostedService' - timed with Timer
 3. 'Worker' - timed with Task.Delay
-4. 'Worker' - timed with PeriodicTimer
-<br>
+4. 'Worker' - timed with PeriodicTimer<br>
+
 ### 1. 'HostedService' - timed with TimeProvider.Timer
 This kind of Hosted Service enables Unit Testing without delays.
 * Create your Timers with timeProvider.CreateTimer(...) instead of new Timer(...).
