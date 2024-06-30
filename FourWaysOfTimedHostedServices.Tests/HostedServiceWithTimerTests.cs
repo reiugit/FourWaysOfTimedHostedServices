@@ -1,14 +1,14 @@
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace FourWaysOfTimedHostedServicesTests;
+namespace FourWaysOfTimedHostedServices.Tests;
 
-public class WorkerWithPeriodicTimerTests
+public class HostedServiceWithTimerTests
 {
     [Fact]
-    public async Task WorkerWithPeriodicTimer_ShouldReturn_1()
+    public async Task HostedServiceWithTimer_ShouldReturn_1()
     {
         //Arrange
-        var sut = new WorkerWithPeriodicTimer();
+        var sut = new HostedServiceWithTimer();
         await sut.StartAsync(CancellationToken.None);
 
         //Act

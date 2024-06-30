@@ -1,14 +1,15 @@
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace FourWaysOfTimedHostedServicesTests;
+namespace FourWaysOfTimedHostedServices.Tests;
 
-public class HostedServiceWithTimerTests
+public class HostedServiceWithSystemTimeProviderTests
 {
     [Fact]
-    public async Task HostedServiceWithTimer_ShouldReturn_1()
+    public async Task HostedServiceWithSystemTimeProvider_ShouldReturn_1()
     {
         //Arrange
-        var sut = new HostedServiceWithTimer();
+        var timeProvider = TimeProvider.System;
+        var sut = new HostedServiceWithTimeProvider(timeProvider);
         await sut.StartAsync(CancellationToken.None);
 
         //Act

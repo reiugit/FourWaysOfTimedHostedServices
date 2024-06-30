@@ -1,7 +1,7 @@
 using Microsoft.Extensions.Time.Testing;
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace FourWaysOfTimedHostedServicesTests;
+namespace FourWaysOfTimedHostedServices.Tests;
 
 public class HostedServiceWithFakeTimeProviderTests
 {
@@ -15,7 +15,7 @@ public class HostedServiceWithFakeTimeProviderTests
 
         //Act
         fakeTimeProvider.Advance(TimeSpan.FromSeconds(1.5)); //no delay
-        
+
         //Assert
         Assert.Equal(1, sut.Count);
 
