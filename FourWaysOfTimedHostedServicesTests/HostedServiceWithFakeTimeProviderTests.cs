@@ -9,7 +9,7 @@ public class HostedServiceWithFakeTimeProviderTests
     public async Task HostedServiceWithFakeTimeProvider_ShouldReturn_2()
     {
         //Arrange
-        var fakeTimeProvider = new FakeTimeProvider();
+        var fakeTimeProvider = new FakeTimeProvider(DateTimeOffset.UtcNow);
         var sut = new HostedServiceWithTimeProvider(fakeTimeProvider);
         await sut.StartAsync(CancellationToken.None);
 
