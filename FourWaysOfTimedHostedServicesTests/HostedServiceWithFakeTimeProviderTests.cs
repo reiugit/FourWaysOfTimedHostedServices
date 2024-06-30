@@ -9,12 +9,12 @@ public class HostedServiceWithFakeTimeProviderTests
     public async Task HostedServiceWithFakeTimeProvider_ShouldReturn_2()
     {
         //Arrange
-        var timeProvider = new FakeTimeProvider();
-        var sut = new HostedServiceWithTimeProvider(timeProvider);
+        var fakeTimeProvider = new FakeTimeProvider();
+        var sut = new HostedServiceWithTimeProvider(fakeTimeProvider);
         await sut.StartAsync(CancellationToken.None);
 
         //Act
-        timeProvider.Advance(TimeSpan.FromSeconds(1.5)); //no delay
+        fakeTimeProvider.Advance(TimeSpan.FromSeconds(1.5)); //no delay
         
         //Assert
         Assert.Equal(1, sut.Count);

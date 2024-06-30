@@ -4,7 +4,9 @@ namespace FourWaysOfTimedHostedServices.HostedServices;
 
 public class WorkerWithPeriodicTimer() : BackgroundService
 {
-    public int Count;
+    private int count;
+
+    public int Count => count;
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -14,7 +16,7 @@ public class WorkerWithPeriodicTimer() : BackgroundService
         {
             while (await timer.WaitForNextTickAsync(stoppingToken))
             {
-                CounterService.IncrementCounter(this, ref Count);
+                CounterService.IncrementCounter(this, ref count);
             }
         }
         catch (OperationCanceledException)

@@ -5,14 +5,16 @@ namespace FourWaysOfTimedHostedServices.HostedServices;
 public class HostedServiceWithTimeProvider(TimeProvider timeProvider) : IHostedService, IDisposable
 {
     private ITimer? _timer;
+    private int count;
 
-    public int Count;
+    public int Count => count;
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
-        _timer = timeProvider.CreateTimer(IncrementCounter, null,
-                           TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
-
+        _timer = timeProvider.CreateTimer(callback: IncrementCounter, 
+                                          state: null,
+                                          dueTime: TimeSpan.FromSeconds(1),
+                                          period: TimeSpan.FromSeconds(1));
         return Task.CompletedTask;
     }
 
@@ -29,5 +31,5 @@ public class HostedServiceWithTimeProvider(TimeProvider timeProvider) : IHostedS
     }
 
     private void IncrementCounter(object? state = null)
-        => CounterService.IncrementCounter(this, ref Count);
+        => CounterService.IncrementCounter(this, ref count);
 }

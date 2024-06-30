@@ -5,8 +5,9 @@ namespace FourWaysOfTimedHostedServices.HostedServices;
 public class HostedServiceWithTimer() : IHostedService, IDisposable
 {
     private Timer? _timer;
+    private int count;
 
-    public int Count;
+    public int Count => count;
 
     public Task StartAsync(CancellationToken cancellationToken)
     {
@@ -29,5 +30,5 @@ public class HostedServiceWithTimer() : IHostedService, IDisposable
     }
 
     private void IncrementCounter(object? state)
-        => CounterService.IncrementCounter(this, ref Count);
+        => CounterService.IncrementCounter(this, ref count);
 }

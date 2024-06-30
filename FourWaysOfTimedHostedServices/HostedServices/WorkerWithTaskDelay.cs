@@ -4,7 +4,9 @@ namespace FourWaysOfTimedHostedServices.HostedServices;
 
 public class WorkerWithTaskDelay() : BackgroundService
 {
-    public int Count;
+    private int count;
+
+    public int Count => count;
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -12,7 +14,7 @@ public class WorkerWithTaskDelay() : BackgroundService
         {
             await Task.Delay(1000, stoppingToken);
 
-            CounterService.IncrementCounter(this, ref Count);
+            CounterService.IncrementCounter(this, ref count);
         }
     }
 }
