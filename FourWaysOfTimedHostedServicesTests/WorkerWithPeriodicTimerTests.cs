@@ -1,11 +1,11 @@
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace ExampleTests;
+namespace FourWaysOfTimedHostedServicesTests;
 
 public class WorkerWithPeriodicTimerTests
 {
     [Fact]
-    public async Task WorkerWithPeriodicTimer_ShouldReturn_2()
+    public async Task WorkerWithPeriodicTimer_ShouldReturn_1()
     {
         //Arrange
         var sut = new WorkerWithPeriodicTimer();

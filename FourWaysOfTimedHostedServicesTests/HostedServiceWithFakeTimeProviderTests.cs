@@ -1,12 +1,12 @@
 using Microsoft.Extensions.Time.Testing;
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace ExampleTests;
+namespace FourWaysOfTimedHostedServicesTests;
 
 public class HostedServiceWithFakeTimeProviderTests
 {
     [Fact]
-    public async Task HostedServiceWithFakeTimeProvider_ShouldReturn_2()
+    public async Task HostedServiceWithFakeTimeProvider_ShouldReturn_1()
     {
         //Arrange
         var fakeTimeProvider = new FakeTimeProvider(DateTimeOffset.UtcNow);

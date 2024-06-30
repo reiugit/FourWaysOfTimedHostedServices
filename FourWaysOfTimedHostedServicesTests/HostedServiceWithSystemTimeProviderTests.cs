@@ -1,11 +1,11 @@
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace ExampleTests;
+namespace FourWaysOfTimedHostedServicesTests;
 
 public class HostedServiceWithSystemTimeProviderTests
 {
     [Fact]
-    public async Task HostedServiceWithSystemTimeProvider_ShouldReturn_2()
+    public async Task HostedServiceWithSystemTimeProvider_ShouldReturn_1()
     {
         //Arrange
         var timeProvider = TimeProvider.System;

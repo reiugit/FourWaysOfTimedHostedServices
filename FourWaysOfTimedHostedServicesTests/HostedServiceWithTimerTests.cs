@@ -1,11 +1,11 @@
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace ExampleTests;
+namespace FourWaysOfTimedHostedServicesTests;
 
 public class HostedServiceWithTimerTests
 {
     [Fact]
-    public async Task HostedServiceWithTimer_ShouldReturn_2()
+    public async Task HostedServiceWithTimer_ShouldReturn_1()
     {
         //Arrange
         var sut = new HostedServiceWithTimer();

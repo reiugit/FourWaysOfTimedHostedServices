@@ -1,11 +1,11 @@
 using FourWaysOfTimedHostedServices.HostedServices;
 
-namespace ExampleTests;
+namespace FourWaysOfTimedHostedServicesTests;
 
 public class WorkerWithTaskDelayTests
 {
     [Fact]
-    public async Task WorkerWithTaskDelay_ShouldReturn_2()
+    public async Task WorkerWithTaskDelay_ShouldReturn_1()
     {
         //Arrange
         var sut = new WorkerWithTaskDelay();
