@@ -8,7 +8,7 @@ ___
 
 ### 1. 'HostedService' - timed with TimeProvider.Timer
 &nbsp; &nbsp; This kind of Hosted Service enables Unit Testing without delays.
-* Create your Timers with timeProvider.CreateTimer(...) instead of new Timer(...).
+* Create your Timers with 'timeProvider.CreateTimer(...)' instead of 'new Timer(...)'.
 * For Unit Tests simply install NuGet package 'Microsoft.Extensions.TimeProvider.Testing'.<br>
 * Then inject Microsoft.Extensions.Time.Testing.FakeTimeProvider instead of TimeProvider.System.
 * Now you can change the time within your unit tests for example with fakeTimeProvider.Advance(timespan).
