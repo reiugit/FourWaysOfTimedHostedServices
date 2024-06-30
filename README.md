@@ -1,9 +1,9 @@
 # Four ways of Timed HostedServices in .Net 8
 
-1. HostedService with TimeProvider  <--  good choice for Unit Tests
-2. HostedService with Timer
-3. Worker with Task.Delay
-4. Worker with PeriodicTimer
+1. HostedService timed with TimeProvider . . . best choice for Unit Tests
+2. HostedService timed with Timer
+3. Worker with timed with Task.Delay
+4. Worker with timed with PeriodicTimer
 
 ### 1. HostedService with TimeProvider
 This kind of Hosted Service enables Unit Testing without delays.<br>
