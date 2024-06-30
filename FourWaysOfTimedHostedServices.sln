@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWaysOfTimedHostedServices", "FourWaysOfTimedHostedServices\FourWaysOfTimedHostedServices.csproj", "{2D145AA2-2DF0-437C-8A5D-D2D837B836D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FourWaysOfTimedHostedServicesTests", "FourWaysOfTimedHostedServicesTests\FourWaysOfTimedHostedServicesTests.csproj", "{1393B3DE-F360-4887-A358-939127BA5129}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D145AA2-2DF0-437C-8A5D-D2D837B836D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D145AA2-2DF0-437C-8A5D-D2D837B836D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D145AA2-2DF0-437C-8A5D-D2D837B836D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D145AA2-2DF0-437C-8A5D-D2D837B836D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1393B3DE-F360-4887-A358-939127BA5129}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1393B3DE-F360-4887-A358-939127BA5129}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1393B3DE-F360-4887-A358-939127BA5129}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1393B3DE-F360-4887-A358-939127BA5129}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C2B916A-482B-40AB-99BB-5C11833AB18F}
+	EndGlobalSection
+EndGlobal
